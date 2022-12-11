@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verified</title>
+    <link rel="stylesheet" href="../../../style/user-style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../logo/SWIFT - Logo-26.svg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container">
+        <div class="main-logo"><img src="../../../logo/SWIFT.svg" /></div>
+        <div class="logo-title">
+          <span
+            ><span style="font-weight: 1000; font-size: 20px">Swift</span>
+            Tech</span
+          >
+        </div>
+      </div>
+      <div class="navbar">
+        <a href="../../../index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Menu
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../../../index.html#about">About Us</a>
+            <a href="../../../index.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="thick-border">
+        <div class="verified-logo-con">
+          <img src="../../../logo/verifiedLogo.png" />
+        </div>
+        <div class="name-container"><p id="name" class="name"></p></div>
+        <div class="desc-container">
+          <p id="description" class="description"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let name = "Charles R. Martinez";
+      let description =
+        "This is to certify that " +
+        name +
+        " has successfully completed the verification process. His credentials have been thoroughly examined and verified, confirming that he is trusted and eligible for casual meetups. We take great pride in providing a secure, reliable, and efficient service.";
+      document.getElementById("name").innerHTML = name;
+      document.getElementById("description").innerHTML = description;
+    </script>
+    <p class="copyright">© 2022 Swift Tech. All Rights Reserved.</p>
+  </body>
+</html>

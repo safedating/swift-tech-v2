@@ -1,0 +1,786 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+
+.hide {
+  display: none;
+}
+
+.logo-container {
+  display: flex;
+  float: left;
+  justify-content: left;
+  margin-left: 50px;
+  width: fit-content;
+}
+
+.main-logo {
+  display: flex;
+  height: 60px;
+  width: 60px;
+}
+
+.logo-title {
+  align-items: center;
+  display: flex;
+  float: right;
+  margin-left: -30px;
+  font-weight: 500;
+}
+
+.swift-span {
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+/* fix logo title*/
+header {
+  height: 60px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-content: right;
+  background-color: white;
+  display: block;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  font-family: Arial;
+  margin-right: 50px;
+  width: fit-content;
+  float: right;
+  padding: 3px 0;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+  display: block;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  z-index: -1;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: violet;
+  transition: ease-in-out 200ms;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  overflow: hidden;
+}
+
+.display-content {
+  position: relative;
+  background-color: #ffffff;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 110vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.text-reg-container {
+  width: 50%;
+  float: left;
+  height: 100%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: left;
+  padding-left: 100px;
+  text-transform: uppercase;
+  color: black;
+  transition-delay: 10ms;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.regBut {
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 10px auto;
+  letter-spacing: 4px;
+  letter-spacing: 4px;
+  border: 2px solid white;
+  width: fit-content;
+  animation-name: entry;
+  animation-duration: 1s;
+}
+
+.regBut:hover {
+  cursor: pointer;
+}
+
+.regText {
+  background-color: #9b59b6;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.figure {
+  background-image: url(../image/Onlinedating.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  margin-top: -100px;
+}
+
+.exit-button {
+  display: flex;
+  float: right;
+  position: relative;
+  margin: -40px -10px 0;
+  border-style: none;
+}
+
+.exBut {
+  border: 0;
+  text-align: center;
+  display: flex;
+}
+
+.exit-logo {
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  background-color: white;
+  display: flex;
+}
+
+.exBut:hover {
+  cursor: pointer;
+}
+
+.quote {
+  margin-top: 80px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduce-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+@keyframes entry {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: underline 2px grey;
+  position: absolute;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.sub-h4 {
+  font-size: 12px;
+}
+
+.top-here {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.link-2:hover {
+  background-color: black;
+  color: white;
+  transition: ease-in 200ms;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.faq-platform {
+  width: auto;
+  border-bottom: 2px solid grey;
+  background-color: white;
+  display: grid;
+}
+
+.ourStory {
+  color: #ba68c8;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+.story-content {
+  font-size: large;
+  padding: 0 40px;
+}
+
+.promote {
+  font-size: 25px;
+  border-left: 5px solid #ba68c8;
+  border-radius: 4px;
+  padding: 30px;
+  margin: 90px;
+}
+
+.story-container {
+  width: 100%;
+  margin: 60px auto;
+  line-height: 40px;
+}
+
+.vission {
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 60px;
+  background-color: #2c2776;
+  color: white;
+}
+
+.vission-head {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+
+.grid {
+  text-align: left;
+}
+
+.grid-mis-vis {
+  text-align: center;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.faq-platform {
+  overflow: hidden;
+}
+
+.hw-main-container {
+  width: 100%;
+  background-color: #8155ba;
+  overflow-x: hidden;
+}
+
+.hw-title {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 20px 0 0;
+  color: #ffffff;
+}
+
+.hw-container {
+  display: flex;
+  padding: 20px 50px;
+  max-width: 70em;
+  margin: 20px auto 50px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.hw-text {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 40px;
+}
+
+.step-count {
+  font-size: 25px;
+  font-weight: 1000;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #695e93;
+  color: white;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.con-1 {
+  width: 33.33%;
+  height: 450px;
+  float: left;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.con-2 {
+  width: 33.33%;
+  height: 450px;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 0 20px;
+  overflow: hidden;
+  transition-delay: 200ms;
+}
+.con-3 {
+  width: 33.333%;
+  height: 450px;
+  float: right;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 0 20px;
+  overflow: hidden;
+  transition-delay: 400ms;
+}
+
+.illustration {
+  width: 200px;
+  height: 200px;
+  filter: hue-rotate(45deg);
+}
+
+.tuto-st-idv {
+  text-align: center;
+  justify-content: center;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tuto-st-idv .title-con {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.tuto-st-idv .title-con .tuto-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tuto-st-idv .tuto-con1 {
+  width: 100%;
+
+  display: flex;
+}
+.tuto-st-idv .tuto-con2 {
+  width: 100%;
+
+  display: block;
+}
+
+.demo-icon-con-1 {
+  display: block;
+  float: left;
+  justify-content: left;
+  align-items: center;
+  width: 30%;
+  overflow: hidden;
+  padding: 40px 10px;
+  margin: 20px auto;
+}
+
+.demo-icon-1 {
+  width: 100%;
+}
+
+.demo-text-con-1 {
+  float: left;
+  display: flex;
+  width: 75%;
+  padding: 20px;
+  margin-top: 90px;
+}
+
+.text-top {
+  text-align: left;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.demo-icon-con-2 {
+  display: flex;
+  float: right;
+  justify-content: right;
+  align-items: center;
+  width: 25%;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.demo-icon-2 {
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.demo-text-con-2 {
+  float: left;
+  display: flex;
+  width: 75%;
+  padding: 20px;
+  margin-top: 90px;
+}
+
+.demo-text {
+  font-size: 20px;
+  text-align: left;
+  vertical-align: middle;
+  padding: 50px 0;
+}
+
+.copyright {
+  margin: 30px auto;
+  font-size: 12px;
+  color: grey;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.contact {
+  width: 100%;
+  overflow: hidden;
+  height: 150px;
+  padding: 20px;
+}
+
+.contact-title {
+  border-bottom: solid 2px #9b59b6;
+}
+
+.contact-icon {
+  align-items: center;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.email,
+.text-support {
+  display: flex;
+  height: 30px;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 584px) {
+  h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .sub-h4 {
+    font-size: 13px;
+  }
+
+  .regBut {
+    margin-top: 30px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+
+  .display-content {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .text-reg-container {
+    width: 100%;
+    height: 45vh;
+    display: block;
+  }
+
+  .figure {
+    width: 100%;
+    height: 55vh;
+    margin: auto;
+  }
+
+  .navbar {
+    margin-right: 5px;
+  }
+
+  .hw-main-container {
+    margin: 0;
+    padding: 20px;
+  }
+  .hw-container {
+    flex-direction: column;
+  }
+
+  .mobile-con {
+    width: 100%;
+    height: fit-content;
+    margin: 10px auto;
+  }
+
+  .hw-text {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .hw-title {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .step-count {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .promote {
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px 20px 50px;
+  }
+
+  .ourStory {
+    font-size: 25px;
+  }
+
+  .story-content {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .vission-head {
+    font-size: 20px;
+  }
+
+  .vission {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .tuto-st-idv .tuto-con1 {
+    display: grid;
+    margin: 0;
+  }
+  .demo-icon-con-1 {
+    width: 100%;
+    max-width: 400px;
+    float: left;
+    padding: 0;
+  }
+
+  .demo-text-con-1 {
+    padding-top: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .demo-text {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .text-top {
+    padding: 5px;
+    font-size: 15px;
+    float: left;
+  }
+
+  .tuto-st-idv .tuto-con2 {
+    display: grid;
+    margin: 0;
+  }
+  .demo-icon-con-2 {
+    width: 100%;
+    max-width: 300px;
+    float: left;
+    padding: 0;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .demo-text-con-2 {
+    padding-top: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .tuto-st-idv .title-con .tuto-title {
+    font-size: 20px;
+  }
+
+  .logo-container {
+    margin-left: 20px;
+    height: fit-content;
+  }
+
+  .container {
+    position: relative;
+
+    margin: -90% auto 0;
+    border-radius: 0;
+  }
+
+  .regText {
+    font-size: 15px;
+  }
+
+  .regBut {
+    z-index: 1;
+  }
+
+  .other_platform {
+    width: 200px;
+  }
+
+  .access-code {
+    width: 200px;
+  }
+
+  .contact-icon {
+    display: flex;
+    width: 15px;
+    height: 15px;
+  }
+
+  .email,
+  .text-support {
+    display: flex;
+    height: 30px;
+    margin: 10px;
+    font-size: 12px;
+  }
+}
